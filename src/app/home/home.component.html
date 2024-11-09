@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    <link rel="stylesheet" href="./home.component.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <!-- Logo on the Left -->
+    <a href="#" class="logo">
+       <div> <img src="../" alt="" class=""> </div>
+    </a>
+
+    <!-- Product in the Center -->
+    <a href="#" class="nav-item view-button center">Product</a>
+
+    <!-- Add to Cart on the Right with Emoji -->
+    <a href="#" class="nav-item view-button right">Cart 🛒</a>
+</nav>
+
+<!-- Product Cards -->
+<div *ngFor="let product of products" class="product-card">
+    <img [src]="product.imagePath" alt="{{ product.name }}" />
+    <div class="product-name">{{ product.name }}</div>
+    <div class="product-price">{{ product.price }}</div>
+    <div class="product-description">{{ product.description }}</div>
+    <button class="add-to-cart view-button ">Add to Cart</button>
+     <a href="#" class="button view-button">View Product</a>
+</div>
+
+</body>
+</html>
